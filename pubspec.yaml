@@ -1,0 +1,21 @@
+name: soundpool
+description: A Flutter Sound Pool for playing short audio files. Sound tracks are cached in memory and played directly from cache.
+version: 2.4.0
+repository: https://github.com/lichess-org/flutter-soundpool
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: org.lichess.soundpool
+        pluginClass: SoundpoolPlugin
+      ios:
+        pluginClass: SoundpoolPlugin
