@@ -1,4 +1,4 @@
-package pl.ukaszapps.soundpoolexample
+package org.lichess.soundpoolexample
 
 import io.flutter.embedding.android.FlutterActivity
 

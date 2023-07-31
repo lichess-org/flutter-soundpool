@@ -5,7 +5,7 @@ import AVFoundation
 
 public class SwiftSoundpoolPlugin: NSObject, FlutterPlugin {
     public static func register(with registrar: FlutterPluginRegistrar) {
-        let channel = FlutterMethodChannel(name: "pl.ukaszapps/soundpool", binaryMessenger: registrar.messenger())
+        let channel = FlutterMethodChannel(name: "org.lichess/soundpool", binaryMessenger: registrar.messenger())
         let instance = SwiftSoundpoolPlugin()
         registrar.addMethodCallDelegate(instance, channel: channel)
     }

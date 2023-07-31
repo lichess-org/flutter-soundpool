@@ -1,4 +1,4 @@
-package pl.ukaszapps.soundpool
+package org.lichess.soundpool
 
 import android.content.Context
 import android.media.AudioAttributes
@@ -34,7 +34,7 @@ class SoundpoolPlugin : MethodCallHandler, FlutterPlugin {
             pool.onRegister(registrar.context(), registrar.messenger())
         }
 
-        private const val CHANNEL_NAME = "pl.ukaszapps/soundpool"
+        private const val CHANNEL_NAME = "org.lichess/soundpool"
     }
 
     private fun onRegister(context: Context,  messenger: BinaryMessenger) {

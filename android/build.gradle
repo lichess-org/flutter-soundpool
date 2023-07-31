@@ -1,4 +1,4 @@
-group 'pl.ukaszapps.soundpool'
+group 'org.lichess.soundpool'
 version '1.0-SNAPSHOT'
 
 buildscript {
