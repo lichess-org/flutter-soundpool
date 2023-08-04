@@ -98,12 +98,13 @@ public class SwiftSoundpoolPlugin: NSObject, FlutterPlugin {
             default:
                 mode = .default
             }
+            let session = AVAudioSession.sharedInstance()
             do {
-                try AVAudioSession.sharedInstance().setCategory(category, mode: mode)
-                print("Audio session updated: category = '\(category)', mode = '\(mode)'.")
-            } catch (let e) {
-                //do nothing
-                print("Error while trying to set audio category: '\(e)'")
+                try session.setCategory(category, mode: mode)
+                try session.setPreferredIOBufferDuration(0.005)
+                try session.setActive(true)
+            } catch (let error as NSError) {
+                print("Failed to set the audio session: \(error.localizedDescription)")
             }
         }
     }
