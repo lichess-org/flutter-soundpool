@@ -100,7 +100,10 @@ public class SwiftSoundpoolPlugin: NSObject, FlutterPlugin {
             }
             let session = AVAudioSession.sharedInstance()
             do {
-                try session.setCategory(category, mode: mode)
+                try session.setCategory(category, mode: mode, options: [
+                    .mixWithOthers,
+                    .allowBluetoothA2DP,
+                ])
                 try session.setPreferredIOBufferDuration(0.005)
                 try session.setActive(true)
             } catch (let error as NSError) {
